@@ -1,0 +1,1 @@
+async function retry(fn, n=3) { try { return await fn(); } catch(e) { if(n>0) return retry(fn, n-1); throw e; } } module.exports = { retry };
